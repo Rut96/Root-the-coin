@@ -11,7 +11,7 @@ export function drawCoinUI(coinData, chosenCoinIds, currency) {
 
         let imgHtml = `
             <div class="no-coins-message">
-                <img src="../../assets/images/coin-not-found.webp" alt="No coins found" class="no-coins-image">
+                <img src="assets/images/coin-not-found.webp" alt="No coins found" class="no-coins-image">
                 <div class="no-coins-info">
                     <h2>No Coins Found</h2>
                     <p>We couldn't find any coins matching your search criteria. Please try adjusting your search or check back later for updates.</p>

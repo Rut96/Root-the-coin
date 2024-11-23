@@ -105,8 +105,8 @@ export async function updateChart(coinSymbol) {
         }
 
         const [candleResponse, priceResponse] = await Promise.all([
-            $.ajax({url: url, method: 'GET'}),
-            $.ajax({url: `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${coinSymbol.toUpperCase()}&tsyms=${currency.toUpperCase()}`, method: 'GET'})
+            $.ajax({ url: url, method: 'GET' }),
+            $.ajax({ url: `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${coinSymbol.toUpperCase()}&tsyms=${currency.toUpperCase()}`, method: 'GET' })
         ]);
 
         const historicalDataArr = candleResponse.Data.Data;
@@ -146,7 +146,7 @@ export async function updateAllCharts(chosenCoins, currency) {
     if (chosenCoins.length === 0) {
         $('#chartsContainer').html(`
             <div class="no-charts-message">
-                <img src="../../assets/images/nocharts.webp" alt="No charts available" class="no-charts-image">
+                <img src="assets/images/nocharts.webp" alt="No charts available" class="no-charts-image">
                 <div class="no-charts-info">
                     <h2>No Coins Selected</h2>
                     <p>Choose some coins to see their live charts here!</p>
