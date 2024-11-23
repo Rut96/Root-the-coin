@@ -1,0 +1,92 @@
+.coin {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    transition: transform 0.2s ease-out;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+}
+
+#parallax {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#coinsBackImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 10;
+    white-space: nowrap;
+    transition: transform 0.1s ease-out;
+}
+
+#coinContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.coin {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    transition: top 0.2s ease-out, transform 0.2s ease-out;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+}
+
+#parallax::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+    pointer-events: none;
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .navigation a {
+        padding: 4px 10px;
+        margin: 3px;
+    }
+
+    #text {
+        font-size: 3em;
+    }
+
+    #cryptoContainer {
+        padding: 50px 5%;
+    }
+}

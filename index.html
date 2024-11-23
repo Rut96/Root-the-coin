@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root the Coin</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/fav.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notyf/3.10.0/notyf.min.css"
+        integrity="sha512-ZX18S8AwqoIm9QCd1EYun82IryFikdJt7lxj6583zx5Rvr5HoreO9tWY6f2VhSxvK+48vYFSf4zFtX/t2ge62g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles/coin.css">
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="styles/overlay.css">
+    <link rel="stylesheet" href="parallax/parallax.css">
+    <link rel="stylesheet" href="styles/liveChart.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script type="module" src="parallax/parallax.js"></script>
+    <script type="module" src="src/crypto-api.js"></script>
+    <script type="module" src="src/crypto-chart.js"></script>
+    <script type="module" src="src/crypto-ui.js"></script>
+    <script type="module" src="src/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/gifs/bitcoin.gif" alt="btc">
+        </div>
+        <nav class="navigation">
+            <a href="#homeLink" id="homeLink" class="active">Home</a>
+            <a href="#liveServerLink" id="liveServerLink">Live Server</a>
+        </nav>
+    </header>
+
+    <section id="parallax">
+        <h2 id="text">Root the coin</h2>
+        <img src="./assets/images/bright-coins-fall.jpg" id="coinsBackImg">
+        <div id="coinContainer"></div>
+    </section>
+
+    <section id="cryptoContainer">
+        <div id="currencySelector">
+            <select id="currency">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="ils">ILS</option>
+            </select>
+            <input type="text" id="searchBox" placeholder="Search">
+            <button id="clearAllButton">Clear All</button>
+        </div>
+        <div id="paginationContainer"></div>
+        <div id="coinList"></div>
+    </section>
+
+    <section id="liveServerContainer" style="display: none;">
+        <div id="chartsContainer"></div>
+    </section>
+
+
+    <div id="coinOverlay" class="overlay">
+        <div class="overlay-content">
+            <h2 id="overlayTitle"></h2>
+            <p id="overlayMessage"></p>
+            <div id="overlayChoices"></div>
+            <button id="overlayConfirm">Confirm</button>
+            <button id="overlayClose">Close</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

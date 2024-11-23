@@ -1,0 +1,219 @@
+#chartsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+.chart-container {
+    width: calc(50% - 20px);
+    margin: 10px;
+    min-width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+}
+
+.chart-controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    margin-top: auto;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.control-group label {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.chart-controls select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 0.9em;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chart-controls select:hover {
+    border-color: #999;
+}
+
+.chart-controls select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.price-change {
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.price-change.positive {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #006600;
+}
+
+.price-change.negative {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #660000;
+}
+
+.coin-symbol {
+    font-size: 1.2em;
+}
+
+.coin-price {
+    font-size: 1.1em;
+}
+
+.coin-change {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.coin-change.positive {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.coin-change.negative {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.chart {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.no-charts-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f6f8fa, #e9ecef);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.no-charts-message::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+}
+
+.no-charts-image {
+    max-width: 300px;
+    height: auto;
+    margin-right: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.no-charts-info {
+    max-width: 300px;
+    height: auto;
+}
+
+.no-charts-message:hover .no-charts-image {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.no-charts-message h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.no-charts-message p {
+    font-size: 1.1rem;
+    color: #34495e;
+    max-width: 300px;
+    line-height: 1.6;
+}
+
+.no-charts-message {
+    animation: fadeIn 0.6s ease-out;
+}
+
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    .chart-container {
+        width: 100%;
+    }
+
+    .no-charts-message {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .no-charts-image {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        max-width: 250px;
+    }
+
+    .no-charts-info {
+        max-width: 250px;
+    }
+
+    .no-charts-message h2 {
+        font-size: 1.8rem;
+    }
+
+    .no-charts-message p {
+        font-size: 1rem;
+    }
+}
+
