@@ -146,7 +146,7 @@ export async function updateAllCharts(chosenCoins, currency) {
     if (chosenCoins.length === 0) {
         $('#chartsContainer').html(`
             <div class="no-charts-message">
-                <img src="/../assets/images/nocharts.webp" alt="No charts available" class="no-charts-image">
+                <img src="../../assets/images/nocharts.webp" alt="No charts available" class="no-charts-image">
                 <div class="no-charts-info">
                     <h2>No Coins Selected</h2>
                     <p>Choose some coins to see their live charts here!</p>
