@@ -10,7 +10,7 @@ $(document).ready(() => {
     // coins with depth
     for (let i = 0; i < coinCount * 2; i++) {
         const $coin = $('<img>', {
-            src: `/../assets/images/coin${Math.floor(Math.random() * 4) + 1}.png`,
+            src: `./../assets/images/coin${Math.floor(Math.random() * 4) + 1}.png`,
             class: 'coin'
         });
         const depth = Math.random();
